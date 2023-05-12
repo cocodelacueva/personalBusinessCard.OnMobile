@@ -1,0 +1,89 @@
+{
+    "given_name": "coco",
+    "picture": "https://graph.microsoft.com/v1.0/me/photo/$value",
+    "name": "coco",
+    "phone": "123456789",
+    "email": "coco@portinos.com",
+    "celPhone": {
+        "number": "+5491155071727",
+        "whatsapp": false
+    },
+    "socialNetworks": [
+        {
+            "name": "facebook",
+            "url": "https://www.facebook.com/coco"
+        },
+        {
+            "name": "twitter",
+            "url": "https://twitter.com/coco"
+        }
+    ],
+    "cardsData": [
+        {
+            "id": "1",
+            "template": "minimal",
+            "name": "coco",
+            "picture": "",
+            "phone": "541123459876",
+            "celPhone": {
+                "number": "+5491155071727",
+                "whatsapp": false
+            },
+            "email": "coco@portinos.com",
+            "socialNetworks": [
+                {
+                    "name": "facebook",
+                    "url": "https://www.facebook.com/coco"
+                },
+                {
+                    "name": "twitter",
+                    "url": "https://twitter.com/coco"
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "template": "business",
+            "name": "coco",
+            "picture": false,
+            "phone": "541123459876",
+            "celPhone": {
+                "number": "+5491155071727",
+                "whatsapp": false
+            },
+            "email": "coco@portinos.com",
+            "socialNetworks": [
+                {
+                    "name": "facebook",
+                    "url": "https://www.facebook.com/coco"
+                },
+                {
+                    "name": "twitter",
+                    "url": "https://twitter.com/coco"
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "template": "design",
+            "picture": "",
+            "name": "coco",
+            "phone": "541123459876",
+            "celPhone": {
+                "number": "+5491155071727",
+                "whatsapp": false
+            },
+            "email": "coco@portinos.com",
+            "socialNetworks": [
+                {
+                    "name": "facebook",
+                    "url": "https://www.facebook.com/coco"
+                },
+                {
+                    "name": "twitter",
+                    "url": "https://twitter.com/coco"
+                }
+            ]
+        }
+    ]
+}

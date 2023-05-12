@@ -7,6 +7,7 @@ Es una tarjeta personal de negocios pero hecha con una App.
 * React Native
 * Expo
 * Azure: https://portal.azure.com/#home
+* Azure registro apps: https://portal.azure.com/#view/Microsoft_AAD_RegisteredApps/ApplicationsListBlade
 
 ## Armado
 * Get Started: https://docs.expo.dev/tutorial/introduction/
