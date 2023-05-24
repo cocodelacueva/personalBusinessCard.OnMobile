@@ -1,24 +1,32 @@
 import { StyleSheet, View, Text, Image } from 'react-native';
 
 
-const PersonalCard = ({width, height, landscape}) => {
+const PersonalCard = ({width, height, landscape, card}) => {
     //trae ancho y alto de la pantalla y si es landscape o no
-    console.log(width, height, landscape)
+    console.log(card)
 
     styles = landscape ? landscapesStyles : portraitStyles;
 
-    return (
-        <View style={styles.cardContainer}>
-            <Image style={styles.cardImage} source={require('../../assets/perfil.jpg')} />
-            <Text style={styles.url}>agencia.portinos.com</Text>
-            <View style={styles.textContainer}>
-                <Text style={styles.personalName}>coco</Text>
-                <Text style={styles.personalRole}>Development Team Leader</Text>
-                <Text>coco@portinos.com</Text>
+
+    if (card.theme === 'minimal') {
+        return (
+
+            <View style={styles.cardContainer}>
+                <Image style={styles.cardImage} source={card.image} />
+                <Text style={styles.url}>{card.url}</Text>
+                <View style={styles.textContainer}>
+                    <Text style={styles.personalName}>{card.name}</Text>
+                    <Text style={styles.personalRole}>{card.role}</Text>
+                    <Text>{card.email}</Text>
+                </View>
+                
             </View>
-            
-        </View>
-    );
+        )
+    } if ( card.theme === 'business') {
+        return (
+            <Text style={styles.personalName}>Business</Text>
+        )
+    }
 }
 
 const portraitStyles = StyleSheet.create({

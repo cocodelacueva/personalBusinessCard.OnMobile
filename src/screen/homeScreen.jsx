@@ -6,10 +6,30 @@ import { isLandscape } from '../hooks/useOrientation';
 
 import PersonalCard from '../components/personalCard';
 
+const cards = [
+  {
+      theme: 'minimal',
+      name: 'coco',
+      url: 'https://agencia.portinos.com',
+      image: require('../../assets/perfil.jpg'),
+      role: 'Engineering Manager SSR',
+      email: 'coco@portinos.com.ar',
+  },
+  {
+      theme: 'business',
+      name: 'Jorge Pablo Dieguez',
+      url: 'https://agencia.portinos.com',
+      image: require('../../assets/perfil.jpg'),
+      role: 'Engineering Manager SSR',
+      email: 'coco@portinos.com.ar',
+      mobile: '+54 9 11 5507 1727',
+      location: 'Buenos Aires, Argentina',
+  },
+]
+
 const HomeScreen = ({navigation}) => {
   
   const {orientation, wid, hei} = isLandscape();
-  //console.log('h',orientation, wid, hei);
   let seconds = 0;
   let interval;
   const timeToLoadConfig = 20;
@@ -56,6 +76,7 @@ const HomeScreen = ({navigation}) => {
         width={wid}
         height={hei}
         landscape={orientation}
+        card={cards[0]}
          />
       </View>
     </Pressable>
