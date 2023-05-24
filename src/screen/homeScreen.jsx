@@ -4,11 +4,12 @@ import {useState} from 'react';
 //hook
 import { isLandscape } from '../hooks/useOrientation';
 
+import PersonalCard from '../components/personalCard';
+
 const HomeScreen = ({navigation}) => {
   
-  const landscape = isLandscape();
-
-  console.log('home',landscape)
+  const {orientation, wid, hei} = isLandscape();
+  //console.log('h',orientation, wid, hei);
   let seconds = 0;
   let interval;
   const timeToLoadConfig = 20;
@@ -50,10 +51,12 @@ const HomeScreen = ({navigation}) => {
 
   return (
     <Pressable onPressIn={handlePressIn} onPressOut={handlePressOut} style={styles.container}>
-      <View style={styles.container}>
-          
-          <Text style={styles.mainTitles}>Home Screen</Text>
-          
+      <View style={styles.container}>  
+        <PersonalCard
+        width={wid}
+        height={hei}
+        landscape={orientation}
+         />
       </View>
     </Pressable>
   );
@@ -62,19 +65,12 @@ const HomeScreen = ({navigation}) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    flexShrink: 1,
+    width: '100%',
+    height: '100%',
     backgroundColor: '#f26d36',
     alignItems: 'center',
     justifyContent: 'center',
-  },
-
-  mainTitles: {
-    color: '#fff',
-    fontSize: 36,
-  },
-  btn1: {
-    backgroundColor: '#fff',
-    color: '#f26d36',
-    border: 'solid 1px #fff',
   }
 });
 
